@@ -16,20 +16,31 @@ datasource db {
 model products {
   id           Int      @id @default(autoincrement())
   name         String
-  description  String
-  price        Int
-  image_url    String
   category     String
+  image_url    String
+  description  String
+  price        Float
+  order_items   order_items[]
 }
 
 //milestone3
 model orders {
-  order_id       Int      @order_id @default(autoincrement())
-  customer_id    Int
-  total_price    Int
-  status         String
-  created_at     Int
+    order_id       Int      @id @default(autoincrement())
+    customer_id    Int
+    total_price    Float
+    status         String
+    created_at     DateTime   @default(now())
+    order_items   order_items[]
+
+  }
+
+model order_items {
+  order_item_id Int   @id @default(autoincrement())
+  order_id      Int
+  product_id    Int
+  quantity      Float
+  price         Float
+
+  product products @relation(fields: [product_id], references: [id])
+  orders   orders   @relation(fields: [order_id], references: [order_id])
 }
- model order_items {
-  
- }

@@ -1,7 +1,12 @@
+
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const productRoutes = require("./routes/productRoutes");
+const orderRoutes = require("./routes/orderRoutes");
+const orderItemRoutes = require("./routes/orderItemRoutes");
+
+
 
 const app = express();
 const port = 3000;
@@ -22,6 +27,12 @@ app.get("/", (req, res) => {
 
 // Product routes
 app.use("/products", productRoutes);
+
+// Order routes
+app.use("/orders", orderRoutes);
+
+// OrderItem routes
+app.use("/order_items", orderItemRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
