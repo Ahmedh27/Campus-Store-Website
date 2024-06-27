@@ -83,7 +83,7 @@ function App() {
 				orderItem
 			);
 
-			console.log(response2);
+			// console.log(response2);
 		}
 
 		const updatedOrder = {
@@ -94,7 +94,7 @@ function App() {
 			`http://localhost:3000/orders/${data.order_id}`,
 			updatedOrder
 		);
-		console.log(response3);
+		// console.log(response3);
 
 		const response4 = await axios.get(
 			`http://localhost:3000/orders/${data.order_id}`

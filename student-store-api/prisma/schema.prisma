@@ -31,7 +31,6 @@ model orders {
     status         String
     created_at     DateTime   @default(now())
     order_items   order_items[]
-
   }
 
 model order_items {
@@ -41,6 +40,7 @@ model order_items {
   quantity      Float
   price         Float
 
-  product products @relation(fields: [product_id], references: [id])
-  orders   orders   @relation(fields: [order_id], references: [order_id])
+  product products @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  orders   orders   @relation(fields: [order_id], references: [order_id], onDelete: Cascade)
+
 }
