@@ -12,7 +12,7 @@ router.post("/", orderController.createOrder);
 router.put("/:order_id", orderController.updateOrder);
 
 //add items to a order
-router.post("/:order_id/order_items", orderController.addItemsInOrder);
+router.post("/:order_id/items", orderController.addItemsInOrder);
 
 
 //delete a order

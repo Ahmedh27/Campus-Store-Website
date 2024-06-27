@@ -4,7 +4,6 @@ import axios from "axios";
 import NotFound from "../NotFound/NotFound";
 import { formatPrice } from "../../utils/format";
 import "./ProductDetail.css";
-
 function ProductDetail({ addToCart, removeFromCart, getQuantityOfItemInCart }) {
   
   const { productId } = useParams();
@@ -12,6 +11,27 @@ function ProductDetail({ addToCart, removeFromCart, getQuantityOfItemInCart }) {
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(null);
 
+  const baseUrl = "http://localhost:3000";
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      setIsFetching(true);
+      try {
+        const response = await axios.get(`${baseUrl}/products/${productId}`);
+        console.log(response);
+        setProduct(response.data);
+      } catch (error) {
+        console.error("error fetching product detail", error);
+      } finally {
+        setIsFetching(false);
+      }
+    };
+  
+    if (productId) {
+      fetchProduct();
+    }
+  }, [productId]);
+  
 
   if (error) {
     return <NotFound />;

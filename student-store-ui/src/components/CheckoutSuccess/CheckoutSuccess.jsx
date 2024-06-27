@@ -22,7 +22,8 @@ const CheckoutSuccess = ({ order, setOrder }) => {
           <i className="material-icons md-48">fact_check</i>
         </span>
       </h3>
-      {order?.purchase ? (
+
+      {order?.status === "completed" ?  ( // condtinal rendoring show up if order status is compeleted
         <div className="card">
           <header className="card-head">
             <h4 className="card-title">Receipt</h4>

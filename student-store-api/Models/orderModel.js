@@ -22,7 +22,11 @@ const getOrderById = async (orderId) => {
 
 //Function to create a new prod
 const createOrder = async (orderData) => {
-  return prisma.orders.create({ data: orderData });
+  return prisma.orders.create({ data: {
+    customer_id: parseInt(orderData.customer_id),
+        total_price: 0,
+        status: orderData.status
+  } });
 };
 
 //Function to update prod
@@ -54,7 +58,7 @@ const addItemsInOrder = async (orderId, orderItemData) => {
         parseFloat(product.price) * parseInt(orderItemData.quantity),
     },
   });
-  return prisma.order_items.get({
+  return prisma.order_items.create({
     data: {
       order_id: parseInt(orderId),
       product_id: parseInt(orderItemData.product_id),
