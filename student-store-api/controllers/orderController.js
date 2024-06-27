@@ -66,6 +66,41 @@ const deleteOrder = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+//Function to add items product
+const addItemsInOrder = async (req, res) => {
+  try {
+    const addedOrderItem = await orderModel.addItemsInOrder(
+      req.params.order_id,
+      req.body
+    );
+
+    if (addedOrderItem) {
+      res.status(200).json(addedOrderItem);
+    } else {
+      res.status(404).json({ error: "Cannot add OrderItem to order" });
+    }
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+//Function to get order total 
+const getOrderTotal = async (req,res) => {
+        try {
+          const OrderTotal = await orderModel.getOrderTotal(
+            req.params.order_id,
+          );
+
+        if (getOrderTotal) {
+          res.status(200).json(OrderTotal);
+        } else {
+          res.status(404).json({ error: "Order Total not found" });
+        }
+      } catch (error) {
+        res.status(400).json({ error: error.message });
+      }
+};
+
 
 // Export the functions
 module.exports = {
@@ -74,4 +109,6 @@ module.exports = {
   createOrder,
   updateOrder,
   deleteOrder,
+  addItemsInOrder,
+  getOrderTotal
 };

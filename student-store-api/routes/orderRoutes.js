@@ -11,9 +11,17 @@ router.post("/", orderController.createOrder);
 //create a new order
 router.put("/:order_id", orderController.updateOrder);
 
+//add items to a order
+router.post("/:order_id/order_items", orderController.addItemsInOrder);
+
 
 //delete a order
 router.delete("/:order_id", orderController.deleteOrder);
+
+//get OrderTotal
+router.get("/:order_id/total", orderController.getOrderTotal);
+
+
 
 
 module.exports = router;

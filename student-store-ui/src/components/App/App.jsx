@@ -22,7 +22,8 @@ function App() {
   const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [error, setError] = useState(null);
   const [order, setOrder] = useState(null);
-  
+  //const varibale baseUrl string local host
+  const baseUrl = "http://localhost:3000";
 
   // Toggles sidebar
   const toggleSidebar = () => setSidebarOpen((isOpen) => !isOpen);
