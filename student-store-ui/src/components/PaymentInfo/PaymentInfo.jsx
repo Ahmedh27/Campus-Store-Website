@@ -15,7 +15,7 @@ export default function PaymentInfo({ userInfo, setUserInfo, handleOnCheckout, i
           <input
             className="input"
             type="text"
-            placeholder="id"
+            placeholder="Id"
             value={userInfo.id}
             onChange={(e) => setUserInfo((u) => ({ ...u, id: e.target.value }))}
           />

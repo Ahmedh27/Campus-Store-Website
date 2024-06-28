@@ -16,7 +16,13 @@ const getProductById = async (id) => {
 
 //Function to create a new prod
 const createProduct = async (productData) => {
-  return prisma.products.create({ data: productData });
+  return prisma.products.create({ data: {
+    name: productData.name,
+        category: productData.category,
+        image_url: productData.image_url,
+        description: productData.description,
+        price: parseFloat(productData.price)
+  } });
 };
 
 //Function to update prod

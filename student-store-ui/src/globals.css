@@ -3,18 +3,18 @@
 :root {
   --side-padding: 40px;
   --content-width: 1100px;
-  --dark-blue: #2c4047;
-  --bright-green: #00c385;
-  --pure-white: #fff;
-  --grey-bg: #f7f7f7;
-  --accent-orange: #ff9017;
-  --bright-red: #fe3210;
-  --muted: #969696;
-  --font-dark: #212121;
-  --font-light: #5b5b5b;
-  --border-color: #e4e4e4;
-  --star-color-filled: #e5a800;
-  --star-color-empty: #cbd4e6;
+  --dark-blue: #093B80; 
+  --bright-green: black; 
+  --pure-white: #ffffff; 
+  --grey-bg: #e8f0f2; 
+  --accent-orange: black; 
+  --bright-red: #ff3b3f;
+  --muted: #b0bec5;
+  --font-dark: #37474f; 
+  --font-light: #90a4ae; 
+  --border-color: #cfd8dc;
+  --star-color-filled: #ffd700; 
+  --star-color-empty: #dcdcdc;
 }
 
 body {

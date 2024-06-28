@@ -53,24 +53,30 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 
 
 ### Walkthrough Video
-
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
+`<div>
+    <a href="https://www.loom.com/share/368cb10de1e04c99a088346238d568cc">
+      <p>Student Store Project - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/368cb10de1e04c99a088346238d568cc">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/368cb10de1e04c99a088346238d568cc-with-play.gif">
+    </a>
+  </div>`
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The lab sessions were very helpful, especially for understanding the basic backend structure and the intricacies of CRUD operations. These foundational skills were directly applicable to the assignments. However, I found implementing my frontend with my backend more challenging. Although these topics were initially difficult, I enjoyed the process of troubleshooting and learning through these challenges. The satisfaction of successfully integrating the frontend with the backend was particularly rewarding. I encountered issues with routing and one-to-many relationships, which required me to reroute paths and adjust some logical functions in my controllers to implement more features. This primarily occurred from milestone 4 to milestone 5.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-  
-Add your response here
+
+If I had more time, I would have created my own frontend and spent more time developing the server-side aspect of the project. I would also have implemented additional backend features, such as calculating taxes based on location.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+During the demo, I was able to demonstrate a strong overall understanding of my project and present it with energy, maintaining audience engagement. Next time, I would like to implement more stretch features to showcase, or perhaps incorporate a joke to lighten the presentation. Additionally, I would like to try implementing the function structures used by one of my peers.
+
+
 
 ### Open-source libraries used
 
@@ -78,4 +84,4 @@ Add your response here
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+SHOUT OUT TO DEVARSH, KEITH, ERICA, ALEX!!!!!!!!
